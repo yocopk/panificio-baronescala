@@ -175,7 +175,7 @@ li{
 /* ============================== HOME =============================== */
 
 .home-section{
-  background-image: url("/assets/img/wheat.jpg"); /* Imposta il percorso corretto */
+  background-image: url("../img/wheat.jpg"); /* Imposta il percorso corretto */
   background-size: cover ;
   background-repeat: repeat;
   background-position: center;
@@ -381,7 +381,7 @@ li{
   align-items: center;
   padding: 20px;
   background-color: #f0f0f0;
-  background: url(/assets/img/home-holiday-friends-family-festive-table.jpg);
+  background: url(../img/home-holiday-friends-family-festive-table.jpg);
   background-size: cover ;
   background-repeat: repeat;
   background-position: center;
