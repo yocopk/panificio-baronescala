@@ -1,0 +1,1279 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Libre+Baskerville&family=Montserrat&family=REM:wght@200&family=Tangerine:wght@700&display=swap');
+
+/* ================= TIPOGRAFIA =============== */
+:root {
+    --body-font: 'Open Sans', sans-serif;
+    --big-font-size: 3rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .75rem;
+  }
+
+  /*===== VARIABLES CSS =====*/
+:root {
+    --header-height: 3rem;
+    --font-semi: 600;
+    --font-bold: 700;
+  }
+
+/* ============ COLORI ============ */
+:root{
+    --first-color: rgb(196, 15, 15);
+    --white-color: #FAFAFF;
+    --dark-color: #101010;
+    --yellow-color: rgb(255, 208, 0);
+}
+
+/*===== Margenes =====*/
+:root {
+    --mb-1: 0.5rem;
+    --mb-2: 1rem;
+    --mb-3: 1.5rem;
+    --mb-4: 2rem;
+  }
+
+
+/* ============================== GENERAL CSS =============================== */
+
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; /* Applica uno scrolling fluido a tutto il documento */
+}
+
+
+a{
+  text-decoration: none;
+}
+
+body{
+  background-color: var(--white-color);
+}
+
+header{
+  background-color: var(--first-color);
+}
+
+li{
+  list-style: none;
+}
+
+/* ============================== NAV =============================== */
+
+.header a{
+  color: var(--white-color);
+  text-decoration: none;
+}
+
+.nav__logo{
+  width: 170px;
+  margin-left: -5px;
+}
+
+.navbar{
+  min-height: 80px;
+  height: 165px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.nav-menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-branding{
+  font-size: 2rem;
+}
+
+.nav-link{
+  transition: 0.7s ease;
+}
+
+.nav-link:hover{
+  color: var(--yellow-color);
+}
+
+.nav-btns {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+}
+
+.header .contact-btn{
+  /* background-color: var(--first-color);
+  border: 1px solid var(--white-color);
+  color: var(--white-color); */
+  background-color: var(--yellow-color);
+  color: var(--dark-color);
+  font-weight: 800;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  padding: 10px 15px;
+  transition: .3s ease;
+}
+
+.header .contact-btn:hover{
+  background-color: var(--white-color);
+  /* border: 1px solid var(--white-color); */
+  color: var(--dark-color);
+  box-shadow: #FAFAFF;
+}
+
+
+.hamburger{
+  display: none;
+  cursor: pointer;
+}
+
+.bar{
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  --webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  background-color: var(--white-color);
+}
+
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: var(--yellow-color);
+  color: white;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 20%;
+  opacity: 0; /* Inizialmente, il pulsante è trasparente */
+  transition: opacity 0.3s; /* Aggiungi una transizione all'opacità */
+}
+
+#scrollToTopBtn.show {
+  opacity: .8; /* Quando viene aggiunta la classe "show", il pulsante diventa opaco */
+}
+
+
+
+/* ============================== HOME =============================== */
+
+.home-section{
+  background-image: url("/assets/img/wheat.jpg"); /* Imposta il percorso corretto */
+  background-size: cover ;
+  background-repeat: repeat;
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0.7); /* Imposta il colore e l'opacità desiderati */
+  padding: 0;
+  margin-bottom: 0;
+}
+
+
+.home-container{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.hometext-container{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.home-title{
+  font-weight: 900;
+  font-size: 2.5rem;
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.home-description{
+  margin-top: -15px;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.home-services{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 15px;
+  margin-top: 30px;
+  margin-bottom: 0;
+  padding-bottom: 30px;
+}
+
+.home-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Allinea verticalmente al centro */
+  justify-content: center; /* Allinea orizzontalmente al centro */
+  background-color: var(--first-color);
+  padding: 10px;
+  border-radius: 10px;
+  width: calc(25% - 10px);
+  box-sizing: border-box;
+  transition: background-color 0.3s; transform: 0.5s;
+}
+
+/* Rimuovi il padding aggiuntivo dai link */
+.home-icons a {
+  padding: 0;
+}
+
+.icon-description{
+  color: var(--yellow-color);
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+.home-icons:hover {
+  transform: scale(1.05); /* Ingrossa leggermente l'elemento */
+  background-color: var(--yellow-color);
+}
+
+.home-icons:hover .icon-description{
+  color: white;
+}
+
+.img-icon{
+  width: 40px;
+}
+
+.home-img{
+ width: 100%;
+ box-sizing: border-box;
+}
+
+
+
+/* ============================== STORY =============================== */
+
+.section-story{
+  background-color: rgb(238, 237, 237);
+  margin-top: 0;
+}
+
+.story-container{
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.story-title{
+  font-weight:bolder;
+  font-size: 1.8rem;
+  margin-top: 30px;
+}
+
+.story-description{
+  margin-top: 20px;
+}
+
+.story-btn{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: 2px solid var(--first-color);
+  border-radius: 5px;
+  padding: 15px;
+  width: 45%;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--first-color);
+  transition: .3s;
+  text-align: center;
+}
+
+.story-btn:hover{
+  background-color: var(--first-color);
+  color: var(--white-color);
+}
+
+
+
+.story-img-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  /* display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-grow: 1;
+  overflow: hidden;
+  padding-bottom: 5rem; */
+}
+
+.story-img1{
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  border: 5px solid white;
+}
+
+.story-img2{
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  border: 5px solid white;
+  margin-top: -20px;
+}
+
+/* ============================== SHOWCASE =============================== */
+
+.showcase-container {
+  padding: 20px; 
+}
+
+.showcase-title {
+  font-size: 1.8rem; 
+  margin-top: 30px;
+}
+
+.showcase-description {
+  font-size: 1rem; 
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+.showcase-images {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: 10px; 
+}
+
+.showcase-img {
+  width: calc(50% - 5px); 
+  max-width: 200px;
+}
+
+
+/* ============================== SUGGESTIONS =============================== */
+
+
+/* Stile generale della sezione suggerimenti */
+.section-suggestion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+  background: url(/assets/img/home-holiday-friends-family-festive-table.jpg);
+  background-size: cover ;
+  background-repeat: repeat;
+  background-position: center;
+}
+
+/* Stile dei rettangoli bianchi */
+.suggestion-container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Stile delle singole etichette di suggerimento */
+.suggestion-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.suggestion-label img {
+  margin-bottom: 10px;
+}
+
+.suggestion-title {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+.suggestion-description {
+  font-size: 0.9em;
+  color: #888;
+  margin-top: 5px;
+}
+
+/* ============================== ORDERS =============================== */
+.section-order {
+  background-color: rgb(46, 44, 44);
+  padding: 40px 0;
+}
+
+.order-container {
+  text-align: center;
+}
+
+.order-title {
+  font-weight: bolder;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: var(--yellow-color);
+}
+
+.order-description {
+  margin-bottom: 20px;
+  color: var(--white-color);
+}
+
+.order-images-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.order-img {
+  border-radius: 5px;
+  border: 3px solid var(--first-color);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  max-width: 200px;
+  height: auto;
+}
+
+
+/* ============================== RECENSIONI =============================== */
+.reviews-section {
+  background-color: #f8f8f8;
+  padding: 40px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.review {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.review-author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.review-author img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.review-author p {
+  font-weight: bold;
+  margin: 0;
+}
+
+.review-text {
+  margin: 0;
+}
+
+.social-link{
+  color: var(--first-color);
+}
+
+/* ============================== CONTATTA =============================== */
+
+/* Stile generale per la sezione di contatto */
+.section-contact {
+  background-color: #f4f4f4;
+  padding: 30px 0;
+
+}
+
+/* Stile per il contenitore dei dettagli di contatto */
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Stile per il titolo della sezione */
+.contact-title {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Stile per le informazioni di contatto */
+.contact-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Icona per le informazioni di contatto */
+.contact-info i {
+  font-size: 24px;
+  margin-right: 10px;
+  margin-left: 10px;
+  justify-content: center;
+  color: var(--first-color);
+}
+
+/* Stile per il testo delle informazioni di contatto */
+.contact-text {
+  font-size: 18px;
+  color: #555;
+  text-align: left;
+  margin: 0;
+}
+
+/* Stile per il sottotesto delle informazioni di contatto */
+.contact-subtext {
+  font-size: 16px;
+  color: #888;
+}
+
+/* Aggiungi stile al link */
+.contact-subtext a {
+  color: var(--first-color);
+  text-decoration: none;
+}
+
+/* Stile per il link al passaggio del mouse */
+.contact-subtext a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+/* Stile generale per il modulo di contatto */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+/* Stile per il layout a griglia del modulo di contatto */
+.contact-grid {
+  display: grid;
+  gap: 20px;
+}
+
+/* Stile per il contenuto del modulo di contatto */
+.contact-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Stile per le etichette del modulo di contatto */
+.contact-content label {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+/* Stile per gli input del modulo di contatto */
+.contact-content input[type="text"],
+.contact-content input[type="email"],
+.contact-content textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Stile per il pulsante di invio del modulo di contatto */
+.contact-form button[type="submit"] {
+  padding: 10px 20px;
+  background-color: var(--first-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Stile per il pulsante di invio al passaggio del mouse */
+.contact-form button[type="submit"]:hover {
+  background-color: var(--first-color);
+}
+
+.contact-send{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+  border: 3px solid var(--first-color);
+  width: 40%;
+  padding: 10px;
+  border-radius: 10px;
+  color: var(--first-color);
+  font-weight: bold;
+  transition: .3s;
+}
+
+.contact-send:hover{
+  background-color: var(--first-color);
+  color: var(--white-color);
+  
+}
+
+/* ============================== FOOTER =============================== */
+
+.section-footer {
+  background-color: #333;
+  padding: 30px;
+  color: white;
+
+}
+
+.footer-title,
+.footer-subtitle,
+.footer-title-description,
+.footer-description,
+.footer-icon,
+.footer-copy{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* gap: 10px; */
+}
+
+.footer-title-description{
+  margin-top: 10px;
+}
+
+
+.footer-social {
+  display: inline-block;
+  font-size: 30px;
+  color: red;
+  text-decoration: none;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+
+.span-description {
+  color: #ffcc00; /* Colore giallo per il testo all'interno delle descrizioni di orari */
+}
+
+.footer-credits {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Allinea il contenuto all'inizio verticale */
+  margin-top: 20px; /* Aggiungi margine superiore per separare dal contenuto precedente */
+  text-align: center;
+  gap: 10px;
+}
+
+.footer-copylink{
+  color: var(--yellow-color);
+}
+
+
+/* Media query per schermi medi (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .nav-branding {
+    font-size: 1.5rem;
+  }
+
+  .home-icons {
+    width: 30%;
+  }
+
+  .story-img-container {
+    flex-direction: column;
+  }
+
+  .story-img1,
+  .story-img2 {
+    margin: 15px;
+  }
+
+  .showcase-img {
+    width: calc(50% - 10px);
+  }
+}
+
+/* Media query per schermi più grandi (1025px in su) */
+@media (min-width: 1025px) {
+  .nav-link {
+    font-size: 20px;
+    margin: 0 20px;
+  }
+
+  .home-container {
+    flex-direction: row;
+  }
+
+  .home-title {
+    font-size: 3rem;
+  }
+
+  .home-description,
+  .story-description,
+  .showcase-description,
+  .order-description {
+    font-size: 1.2rem;
+  }
+
+  .home-icons {
+    width: 20%;
+  }
+
+  .story-img-container {
+    flex-direction: row;
+  }
+
+  .story-img1,
+  .story-img2 {
+    margin: 0;
+  }
+
+  .showcase-img {
+    width: calc(33.33% - 10px);
+  }
+}
+
+/* ======================================= MEDIA QUERIES ========================================= */
+@media(min-width:320px) and (max-width:425px){
+
+  .story-img-container{
+    padding-bottom: 40px;
+  }
+
+  .story-img1,
+  .story-img2{
+    width: 180px;
+    height: auto;
+  }
+
+}
+/* ======================================= SMALL & TABLET ========================================= */
+@media(max-width: 768px){
+  .hamburger{
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2){
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu{
+    position: fixed;
+    left: -100%;
+    top: 150px;
+    padding-bottom: 25px;
+    gap: 0;
+    flex-direction: column;
+    background-color: var(--first-color);
+    width: 100%;
+    text-align: center;
+    transition: .3s;
+  }
+
+  .nav-item{
+    margin: 16px 0;
+  }
+
+  .nav-menu.active{
+    left: 0;
+  }
+  
+  .story-img-container{
+    padding-bottom: 50px;
+    gap: 20px;
+  }
+}
+
+@media(min-width:768px){
+  .showcase-img{
+    max-width: 400px;
+  }
+
+  .suggestion-container{
+    width: 50%;
+  }
+
+  .order-img{
+    max-width: 300px;
+  }
+}
+/* ======================================= Laptop ========================================= */
+@media (min-width: 769px) and (max-width: 1024px){
+  .nav-btns {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .nav-menu{
+    gap: 30px;
+  }
+
+  .header .contact-btn{
+    padding: 20px 15px;
+    font-size: 15px;
+  }
+
+  .home-container{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+  }
+
+  .home-title{
+    font-size: 2.6rem;
+    margin-top: 2rem;
+  }
+
+  .home-container .home-img{
+    width: 80%;
+    margin-top: 60px;
+    margin-left: 60px;
+    border-radius: 15px;
+  }
+
+  .hometext-container{
+    margin-left: 25px;
+  }
+
+  .home-description{
+    font-size: 1.2rem;
+  }
+
+  .home-services{
+    padding-bottom: 50px;
+  }
+  
+  .home-icons{
+  width: calc(25% - 50px);
+  margin: 30px 30px;
+  }
+
+  .story-title{
+    font-weight:bolder;
+    font-size: 2.3rem;
+    margin-left: 20px;
+  }
+  
+  .story-description{
+    font-size: 1.3rem;
+    margin-left: 20px;
+  }
+
+  .story-btn{
+    font-size: 18px;
+    width: 35%;
+    margin-left: 20px;
+  }
+
+  .story-img-container{
+    gap: 30px;
+    margin-right: 50px;
+    padding-bottom: 50px;
+  }
+
+  .story-img2{
+    margin-top: -30px;
+  }
+
+  .showcase-container{
+    margin-bottom: 30px;
+  }
+
+  .showcase-title{
+    font-size: 2.3rem;
+    margin-left: 20px;
+  }
+
+  .showcase-description{
+    font-size: 1.3rem;
+    margin-left: 20px;
+  }
+
+  .showcase-img {
+    width: calc(50% - 5px); 
+    max-width: 400px;
+  }
+
+  .suggestion-container{
+    padding: 60px;
+    width: 400px;
+    gap: 30px;
+  }
+
+  .suggestion-title{
+    font-size: 1.6rem;
+  }
+
+  .suggestion-description{
+    font-size: 1.2rem;
+  }
+
+  .order-title{
+    font-size: 2.3rem;
+  }
+
+  .order-description{
+    font-size: 1.3rem;
+  }
+
+  .order-img{
+    max-width: 300px;
+  }
+
+  .section-title{
+    font-size: 2rem;
+  }
+  
+  .review-author{
+    font-size: 1.3rem;
+  }
+
+  .review-author img{
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+  }
+
+  .social-link{
+    font-size: 1.3rem;
+  }
+
+  .contact-info i {
+    font-size: 38px;
+  }
+
+  .contact-text{
+    font-size: 20px;
+  }
+
+  .contact-subtext{
+    font-size: 18px;
+  }
+
+  .contact-form{
+    max-width: 700px;
+  }
+
+  .contact-content label{
+    font-size: 22px;
+  }
+
+  .contact-content input[type="text"],
+.contact-content input[type="email"],
+.contact-content textarea {
+  font-size: 20px;
+}
+
+.contact-send{
+  font-size: 20px;
+  width: 40%;
+}
+
+#scrollToTopBtn{
+  font-size: 24px;
+  padding: 7px 14px;
+}
+  
+}
+
+/* ======================================= Desktop ========================================= */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  
+  .header .contact-btn{
+    font-size: 1.1rem;
+    margin-right: 4rem;
+  }
+
+  .home-container{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+  }
+
+  .hometext-container{
+    display: flex;
+    flex-direction: column;
+    margin-right: 8.5rem;
+    margin-left: 2rem;
+    margin-top: 1.8rem;
+    padding-right: 2rem;
+
+
+  }
+
+  .home-title{
+    font-size: 5rem;
+    margin-left: 4.5rem;
+    margin-top: 2rem;
+  }
+
+  .home-description{
+    margin-left: 4.5rem;
+  }
+
+  .home-container .home-img{
+    margin-left: -70px;
+    margin-top: 70px;
+    border-radius: 20px;
+    box-sizing: border-box;
+  }
+
+  /* .home-services{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-right: 250px;
+    padding-bottom: 100px;
+    gap: 30px;
+    margin-left: 100px;
+    margin-top: -70px;
+  } */
+
+  .home-services{
+    display: flex;
+    gap: 50px;
+    margin-right: 650px;
+    margin-left: 90px;
+    margin-top: 50px;
+    padding-bottom: 200px;
+  }
+
+  .home-icons{
+    width: calc(25% - 20px);
+  }
+
+  .icon-description{
+    font-size: 1.4rem;
+    margin-top: 1.2rem;
+  }
+
+  .img-icon{
+    width: 60px;
+  }
+
+  .story-title{
+    margin-left: 35px;
+    font-size: 2.3rem;
+    padding-top: 40px;
+  }
+
+  .story-description{
+    margin-left: 35px;
+  }
+
+  .story-btn{
+    margin-left: 35px;
+    width: 20%;
+  }
+
+  .story-img-container{
+    gap: 60px;
+    margin-top: 20px;
+    padding-bottom: 60px;
+    margin-left: 100px;
+  }
+
+
+  .showcase-title{
+    margin-left: 35px;
+    margin-bottom: 20px;
+    font-size: 2.3rem;
+  }
+
+  .showcase-description{
+    margin-left: 35px;
+  }
+
+  .showcase-container{
+    padding-bottom: 50px;
+  }
+
+  .showcase-images{
+    gap: 20px;
+  }
+
+  .showcase-img{
+    max-width: 400px;
+  }
+
+  .section-suggestion{
+    padding: 20px;
+  }
+
+  .suggestion-container{
+    gap: 30px;
+    padding: 50px;
+    margin: 50px 0;
+  }
+
+  .suggestion-title{
+    font-size: 1.7rem;
+    margin-bottom: .8rem;
+  }
+
+  .suggestion-description{
+    font-size: 1rem;
+    width: 350px;
+    /* margin-left: 9rem;
+    margin-right: 9rem; */
+  }
+
+  .suggestion-label img{
+    width: 60px;
+  }
+
+  .order-img{
+    max-width: 300px;
+  }
+ 
+  .reviews-section{
+    padding: 40px 100px;
+  }
+  
+}
+/* ======================================= Desktop FULL HD========================================= */
+@media(min-width:1920px){
+
+  .home-title{
+    margin-left: 120px;
+    margin-top: 80px;
+    font-size: 4.7rem;
+  }
+
+  .home-description{
+    margin-left: 120px;
+    width: 650px;
+  }
+
+  .home-img{
+    width: 800px;
+    margin-right: 120px;
+    margin-top: 70px;
+    border-radius: 20px;
+  }
+
+  .home-services{
+    width: 30%;
+    margin-left: 120px;
+    margin-top: -180px;
+    padding-bottom: 300px;
+  }
+
+  .home-icons{
+    width: 100px;
+  }
+
+  .icon-description{
+    font-size: 14px;
+    margin-top: 20px;
+  }
+
+  .story-title{
+    margin-left: 80px;
+    margin-top: 60px;
+  }
+
+  .story-description{
+    margin-left: 80px;
+  }
+
+  .story-btn{
+    margin-left: 80px;
+    width: 20%;
+  }
+
+  .story-img-container{
+    margin-left: 250px;
+    margin-top: 30px;
+    padding-bottom: 60px;
+  }
+
+  .showcase-title{
+    margin-left: 80px;
+  }
+
+  .showcase-description{
+    margin-left: 80px;
+  }
+
+  .showcase-images{
+    padding-bottom: 80px;
+  }
+
+  .showcase-img{
+    max-width: 450px;
+  }
+
+  .suggestion-container{
+    padding: 40px 80px;
+    margin: 60px;
+    width: 500px;
+  }
+
+  .suggestion-title{
+    font-size: 1.5rem;
+  }
+  
+  .order-images-container{
+    margin: 40px;
+  }
+
+  .order-img{
+    max-width: 400px;
+  }
+
+  .review{
+    width: 50%;
+    margin-left: 25%;    
+  }
+  
+  .footer-social{
+    display: flex;
+    justify-content: center;
+  
+  }
+  
+}
+
+
+
